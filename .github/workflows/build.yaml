@@ -1,0 +1,20 @@
+name: image build gosty loadtest
+
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  worker:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@master
+
+      - name: Publish to Dockerhub
+        uses: elgohr/Publish-Docker-Github-Action@master
+        with:
+          name: luqmansen/gosty-loadtest
+          dockerfile: Dockerfile
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_TOKEN }}
