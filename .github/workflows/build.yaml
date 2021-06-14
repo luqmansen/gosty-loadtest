@@ -3,7 +3,7 @@ name: image build gosty loadtest
 on:
   push:
     branches:
-      - 'main'
+      - 'master'
 
 jobs:
   worker:
