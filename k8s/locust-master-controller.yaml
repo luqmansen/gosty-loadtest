@@ -18,11 +18,13 @@ spec:
       containers:
         - name: locust-master
           image: luqmansen/gosty-loadtest:latest
+          imagePullPolicy: Always
+
           env:
             - name: LOCUST_MODE
               value: master
             - name: TARGET_HOST
-              value: http://34.101.215.90/
+              value: "http://34.101.215.90/"
           ports:
             - name: loc-master-web
               containerPort: 8089
