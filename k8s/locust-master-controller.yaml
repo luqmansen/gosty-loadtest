@@ -20,6 +20,8 @@ spec:
           env:
             - name: LOCUST_MODE
               value: master
+            - name: TARGET_HOST
+              value: http://34.101.215.90/
           ports:
             - name: loc-master-web
               containerPort: 8089

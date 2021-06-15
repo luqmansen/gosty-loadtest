@@ -22,3 +22,5 @@ spec:
               value: worker
             - name: LOCUST_MASTER
               value: locust-master
+            - name: TARGET_HOST
+              value: http://34.101.215.90/
