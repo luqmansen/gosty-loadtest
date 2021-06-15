@@ -2,6 +2,7 @@ apiVersion: "apps/v1"
 kind: "Deployment"
 metadata:
   name: locust-master
+  namespace: locust
   labels:
     name: locust-master
 spec:
@@ -16,7 +17,7 @@ spec:
     spec:
       containers:
         - name: locust-master
-          image: luqmansen:gosty-loadtest:latest
+          image: luqmansen/gosty-loadtest:latest
           env:
             - name: LOCUST_MODE
               value: master
