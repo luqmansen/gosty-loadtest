@@ -7,6 +7,10 @@ class GostyTask(HttpUser):
 
     @task
     def get_worker(self):
+        self.client.get('/')
+
+    @task
+    def get_worker(self):
         self.client.get('api/worker')
 
     @task
