@@ -1,0 +1,14 @@
+[
+  {
+    "path": "api/worker",
+    "method": "GET"
+  },
+  {
+    "path": "api/scheduler/progress",
+    "method": "GET"
+  },
+  {
+    "path": "api/video/playlist",
+    "method": "GET"
+  }
+]

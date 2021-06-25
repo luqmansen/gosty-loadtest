@@ -15,6 +15,6 @@ jobs:
         uses: elgohr/Publish-Docker-Github-Action@master
         with:
           name: luqmansen/gosty-loadtest
-          dockerfile: Dockerfile
+          dockerfile: locust/Dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_TOKEN }}
