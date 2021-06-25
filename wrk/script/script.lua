@@ -47,7 +47,7 @@ function load_request_objects_from_file(file)
 end
 
 -- Load URL requests from file
-requests = load_request_objects_from_file("requests.json")
+requests = load_request_objects_from_file("./data/requests.json")
 
 -- Check if at least one path was found in the file
 if #requests <= 0 then
