@@ -26,15 +26,12 @@ spec:
             requests:
               cpu: "120m"
               memory: "128Mi"
-            limits:
-              cpu: "512m"
-              memory: "512Mi"
 
           env:
             - name: LOCUST_MODE
               value: master
             - name: TARGET_HOST
-              value: "http://34.101.215.90/"
+              value: "http://gosty-apiserver-loadtest.gosty.svc.cluster.local/"
           ports:
             - name: loc-master-web
               containerPort: 8089
@@ -45,3 +42,12 @@ spec:
             - name: loc-master-p2
               containerPort: 5558
               protocol: TCP
+
+      nodeSelector:
+        locust: "true"
+
+      tolerations:
+        - key: "locust"
+          operator: Equal
+          value: "true"
+          effect: "NoSchedule"
